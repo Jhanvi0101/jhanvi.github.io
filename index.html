@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jhanvi Patel — Odoo Developer</title>
+  <meta name="description" content="Odoo Developer portfolio — custom modules, integrations, migration and ERP customizations." />
+  <style>
+    :root{
+      --bg:#f7f8fb;
+      --card:#ffffff;
+      --accent:#0b74de;
+      --muted:#586171;
+      --max-width:1000px;
+      --radius:12px;
+      --shadow: 0 6px 20px rgba(22,33,62,0.08);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#f3f6fb 0%,var(--bg) 100%);
+      color:#10203b;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      padding:32px 16px;
+      display:flex;
+      justify-content:center;
+      font-size:16px;
+    }
+    .site{
+      width:100%;
+      max-width:var(--max-width);
+    }
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:28px;
+    }
+    .brand{
+      display:flex;
+      gap:16px;
+      align-items:center;
+    }
+    .logo{
+      width:60px;
+      height:60px;
+      border-radius:12px;
+      background:linear-gradient(135deg,var(--accent),#7ac3ff);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-weight:700;
+      box-shadow: var(--shadow);
+      font-size:20px;
+    }
+    h1{margin:0;font-size:20px}
+    .meta{color:var(--muted);font-size:13px}
+    nav{display:flex;gap:14px;align-items:center}
+    .btn{
+      background:transparent;
+      border:1px solid rgba(16,32,59,0.08);
+      padding:8px 12px;
+      border-radius:10px;
+      cursor:pointer;
+      font-size:14px;
+    }
+    main{
+      display:grid;
+      grid-template-columns: 1fr 340px;
+      gap:20px;
+      align-items:start;
+    }
+    @media (max-width:980px){
+      main{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start;gap:12px}
+    }
+    /* Card */
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow: var(--shadow);
+      border:1px solid rgba(12,22,40,0.03);
+    }
+
+    /* Left column */
+    .hero{display:flex;gap:16px;align-items:flex-start;margin-bottom:16px}
+    .hero-details{flex:1}
+    .role{color:var(--accent);font-weight:700;margin-bottom:8px}
+    .headline{margin:0 0 8px 0;font-size:22px}
+    .summary{color:var(--muted);white-space:pre-line}
+
+    .section-title{
+      display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;
+    }
+    .skills-list{
+      display:flex;flex-wrap:wrap;gap:8px;
+    }
+    .skill{
+      background:#f1f6ff;border-radius:999px;padding:6px 10px;font-size:13px;border:1px solid rgba(11,116,222,0.06);
+      color:var(--accent);
+    }
+
+    .experience-item{margin-bottom:18px}
+    .exp-head{display:flex;justify-content:space-between;gap:12px}
+    .job-title{font-weight:700}
+    .job-meta{color:var(--muted);font-size:13px}
+    .project-item{margin-bottom:14px}
+    .impact{color:var(--muted);font-size:14px;margin-top:6px}
+
+    /* Right column */
+    aside .card + .card{margin-top:16px}
+    .contact-list{display:flex;flex-direction:column;gap:8px}
+    .contact-item{display:flex;gap:10px;align-items:center;color:var(--muted);font-size:14px}
+    .link{color:var(--accent);text-decoration:none}
+
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* small UI */
+    .pill{background:#eef7ff;color:var(--accent);padding:6px 10px;border-radius:999px;font-size:12px}
+    .divider{height:1px;background:linear-gradient(90deg,transparent,#eef3fb,transparent);margin:16px 0;border-radius:2px}
+    .toggle{
+      display:none;
+    }
+    @media (max-width:520px){
+      .logo{width:52px;height:52px;font-size:18px}
+    }
+    /* Tiny table of contents */
+    .toc{display:flex;flex-direction:column;gap:8px}
+    .toc a{font-size:14px;color:var(--muted);text-decoration:none}
+    .repo-links{display:flex;gap:8px;flex-wrap:wrap}
+    .small{
+      font-size:13px;color:var(--muted)
+    }
+  </style>
+</head>
+<body>
+  <div class="site">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">JP</div>
+        <div>
+          <h1>Jhanvi Patel</h1>
+          <div class="meta">Odoo Developer — custom modules, API integrations & ERP solutions</div>
+        </div>
+      </div>
+
+      <nav>
+        <div class="pill">Odoo (v14–v18)</div>
+        <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact</button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- LEFT COLUMN -->
+      <div>
+        <section class="card hero">
+          <div style="flex:0 0 80px">
+            <img src="" alt="" style="width:80px;height:80px;border-radius:12px;background:#eef3fb;display:block" />
+          </div>
+          <div class="hero-details">
+            <div class="role">Odoo Developer</div>
+            <h2 class="headline">Building scalable, production-ready ERP solutions — migrations, integrations & customizations</h2>
+            <p class="summary">
+Odoo Developer with 3+ years of hands-on experience across Odoo versions 14 to 18, specializing in migration, API integrations, accounting customization, website development, dynamic snippets, appointment workflows, POS enhancements, and report/QWeb design. Experienced in delivering scalable, clean, and production-ready ERP solutions for global clients, including multiple US-based eCommerce, retail, and distribution businesses.
+
+Strong technical foundation in Python, XML, JavaScript, OWL, PostgreSQL, REST APIs, and UI customization. Known for translating business requirements into smart, reliable, and high-performance Odoo customizations.
+            </p>
+          </div>
+        </section>
+
+        <section class="card" style="margin-top:16px">
+          <div class="section-title">
+            <strong>Technical Skills</strong>
+            <span class="small">Tools: Git · PyCharm · Postman · Cursor</span>
+          </div>
+          <div class="skills-list" aria-hidden="false">
+            <span class="skill">Odoo (Customization)</span>
+            <span class="skill">Python</span>
+            <span class="skill">XML</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">PostgreSQL</span>
+            <span class="skill">REST APIs / JSON / XML-RPC</span>
+            <span class="skill">HTML & CSS</span>
+            <span class="skill">Odoo Website Builder</span>
+          </div>
+        </section>
+
+      
+        <section class="card" style="margin-top:16px">
+          <div class="section-title"><strong>Projects & Selected Work</strong></div>
+
+          <div class="project-item">
+            <div class="job-title">1. Odoo API Integrations — GunBroker, Sports South, RSR</div>
+            <div class="job-meta">Product / inventory / order sync, cron jobs & error handling</div>
+            <div class="impact">Impact: Reduced manual reconciliation by 80% and enabled near real-time marketplace operations.</div>
+          </div>
+
+          <div class="project-item">
+            <div class="job-title">2. End-to-End ERP Customization (Sales, Purchase, Accounting, Inventory)</div>
+            <div class="impact">Delivered configurable accounting structures, custom approval flows, and enhanced purchase/stock traceability to align ERP with client processes.</div>
+          </div>
+
+          <div class="project-item">
+            <div class="job-title">3. Website Development & Dynamic Snippets</div>
+            <div class="impact">Built branded Odoo websites with reusable snippets that let non-technical users update content.</div>
+          </div>
+
+          <div class="project-item">
+            <div class="job-title">4. Dropshipping Workflow & Backorder Automation</div>
+            <div class="impact">Custom purchase flow for partial shipments, automatic backorders, and supplier routing — improving fulfillment performance.</div>
+          </div>
+
+          <div class="project-item">
+            <div class="job-title">5. Appointment Slot Customization</div>
+            <div class="impact">Real-time slot counts, multi-slot booking, and validation to avoid double-booking — better booking accuracy.</div>
+          </div>
+
+          <div class="project-item">
+            <div class="job-title">6. POS Enhancements (Search, Workflow & Tax)</div>
+            <div class="impact">Added product filters, conditional tax exemptions, and backend synchronization for faster POS operations.</div>
+          </div>
+
+          <div class="project-item">
+            <div class="job-title">7. Report & QWeb Customization</div>
+            <div class="impact">Designed clear, business-specific reports for sales, accounting and operations to improve decision-making.</div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <aside>
+        <div class="card">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+            <strong>Contact</strong>
+            <span class="small">Open for opportunities</span>
+          </div>
+          <div class="contact-list">
+            <div class="contact-item"><strong>Email:</strong>&nbsp;<a class="link" href="mailto:your.email@example.com">your.email@example.com</a></div>
+            <div class="contact-item"><strong>GitHub:</strong>&nbsp;<a class="link" href="https://github.com/jhanvi0101" target="_blank" rel="noopener">github.com/jhanvi0101</a></div>
+            <div class="contact-item"><strong>LinkedIn:</strong>&nbsp;<a class="link" href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener">linkedin.com/in/yourprofile</a></div>
+            <div class="contact-item"><strong>Location:</strong>&nbsp;<span class="small">Remote / India</span></div>
+          </div>
+
+          <div class="divider" aria-hidden="true"></div>
+
+          <div>
+            <strong>Quick links</strong>
+            <div class="repo-links" style="margin-top:8px">
+              <a class="btn" href="#projects">Projects</a>
+              <a class="btn" href="#experience">Experience</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <strong>Resume Snapshot</strong>
+          <div style="margin-top:8px;color:var(--muted);font-size:14px">
+            <p style="margin:0 0 8px 0"><strong>Odoo (v14–v18)</strong> · Python · XML · JS · PostgreSQL</p>
+            <p style="margin:0"><strong>APIs:</strong> GunBroker · Sports South · RSR integrations</p>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <strong>Availability</strong>
+          <p style="margin-top:8px;color:var(--muted)">Available for freelance & full-time roles. Open to remote and hybrid positions.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div style="margin-top:18px">Made with care • Odoo Developer portfolio</div>
+      <div class="small" style="margin-top:8px">© <span id="year"></span> Jhanvi Patel</div>
+    </footer>
+  </div>
+
+  <script>
+    // Small helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Smooth scroll for internal links (btns)
+    document.querySelectorAll('a[href^="#"], button.btn').forEach(el=>{
+      el.addEventListener('click', e=>{
+        const href = el.getAttribute('href')||'';
+        if(href.startsWith('#')){
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if(target) target.scrollIntoView({behavior:'smooth'});
+        }
+      })
+    });
+  </script>
+</body>
+</html>
